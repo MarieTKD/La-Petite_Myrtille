@@ -1,0 +1,241 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+  }
+  
+  /* Clear fix hack */
+  .clearfix:after {
+       content: ".";
+       display: block;
+       clear: both;
+       visibility: hidden;
+       line-height: 0;
+       height: 0;
+  }
+  
+  .clear {
+      clear: both;
+  }
+  
+  /******************************************
+  /* BASE STYLES
+  /*******************************************/
+  html {
+      font-size: 62.5%;
+      text-transform: Capitalize;
+  }
+  body>section {
+    width: 100%;
+    height: 80rem;
+  }
+  
+  /* LANDING PAGE */
+
+  .landing {
+    background: url("rhubarb.jpg");
+  }
+  .landing section {
+      float: right;
+  }
+    
+  .landing>section>h1 {
+     display: block;
+     font-size: 4.5rem;
+     padding-right: 5rem;
+     padding-top: 30rem;
+     font-family: gideon roman;
+   }   
+
+  .landing section>select {
+     padding: 1.2rem 3rem;
+     display: inline;
+     background: #F76E11;
+     border: 2px solid black;
+     font-size: 1.5rem;
+     color: white;
+  }
+  .landing section>input {
+      padding: 1.2rem 5rem;
+      border: 2px solid black;
+      margin-left: 10rem;
+      font-size: 1.5rem;
+  }
+
+/* ABOUT US */
+
+.about {
+    background: url(pies.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    /* position: relative; */
+}
+
+.about section span {
+    font-size: 1.5rem;
+    color: #F76E11;
+}
+.about>section {
+    text-align: left;
+    background: #EEEEEE;
+    width: 45rem;
+    height: 40rem;
+    position: relative;
+    top: 33rem;
+    left: 20rem;
+    padding-left: 3rem;
+}
+.about section h1 {
+    font-size: 4.5rem;
+    font-family: gideon roman;
+}
+.about section p {
+    font-size: 1.5rem;
+    width: 70%;
+    font-weight: bold;
+}
+
+.about section>button {
+    /* padding: 1rem 4rem; */
+    background: #FF9F45;
+    color: white;
+    font-size: 1.5rem;
+    border: 2px solid black; 
+    width: 20rem;
+    float: left;
+}
+.about section button+button {
+    /* padding: 1rem 1rem; */
+    background: #F76E11;
+    font-weight: bold;
+    border: 2px solid black;
+    width: 4rem;
+    float: left;
+}
+
+/* SPECIALTY */
+
+.specialty {
+    background: #EEEEEE;
+}
+
+.specialty>section {
+    height: 30rem;
+    padding-left: 12rem;
+}
+
+.specialty span {
+    color: #F76E11;
+    font-size: 2rem;
+    padding: 0 40%;
+    margin-top: 10rem;
+}
+
+
+.specialty section h1 {
+    font-family: gideon roman;
+    font-size: 4.5rem;
+    padding: 0 30%;
+    margin-top: 10rem;
+}
+
+.specialty ul {
+    margin-left: 15rem;
+    margin-top: 10rem;
+}
+
+.specialty ul li {
+    display: inline;
+    padding: 20rem 6rem 2rem 6rem;
+    border-bottom: 2px solid grey;
+}
+
+.specialty ul li:hover {
+    border-bottom: 2px solid #F76E11;
+}
+
+.specialty a {
+    color: black;
+    font-size: 2rem;
+    text-decoration: none;
+    padding-bottom: 3rem;
+}
+
+.specialty a:hover {
+    color:  #F76E11;
+}
+
+/* .specialty li:first-child a:first-child {
+    color: #F76E11;
+}
+.specialty ul li:first-child {
+    border-bottom: 2px solid #F76E11;
+    color: #F76E11;
+} */
+
+
+.meals>img {
+    width: 20%;
+    height: auto;
+    margin: 10rem 3rem 0 3rem;
+
+}
+
+  /******************************************
+  /* LAYOUT
+  /*******************************************/
+  
+  header nav{
+  display: flex;
+  justify-content: flex-end;
+  gap: 5%;
+  font-size: 2rem;
+  height: 4rem;
+  padding-right: 5rem;
+  align-items: center;
+  }
+
+  header nav a {
+    text-decoration: none;
+    color: black;
+  }
+
+  header nav a:hover {
+      color:  #F76E11;
+  }
+  
+  footer {
+  
+  }
+  
+  /******************************************
+  /* ADDITIONAL STYLES
+  /*******************************************/
+
+  @media all and (max-width: 1200px) {
+      .specialty ul li {
+          display: block;
+          margin: 0 0;
+          padding: 2rem 0;
+      }
+      .meals img {
+        display: none;
+      }
+  }
+
+  @media all and (max-width: 600px) {
+      header {
+          height: 10rem;
+      }
+      header>nav {
+          display: flex;
+          flex-direction: column;
+      }
+      .landing section input,
+      .landing section select{
+         width: 100%;
+         display: block;
+      }
+      .landing section h1 {
+         color: white;
+      }
+  }
